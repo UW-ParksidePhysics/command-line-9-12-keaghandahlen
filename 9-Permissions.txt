@@ -1,3 +1,5 @@
+#Concepts Addressed: Prompt, SHell, Directory, File Permission, Redirection, Metacharacter, Text Editor
+
 keaghan@DESKTOP-4U9BVB6:~$ file /etc/shadow
 /etc/shadow: regular file, no read permission
 keaghan@DESKTOP-4U9BVB6:~$ less /etc/shadow
