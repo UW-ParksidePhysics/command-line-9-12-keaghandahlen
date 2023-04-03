@@ -1,1 +1,38 @@
-
+keaghan@DESKTOP-4U9BVB6:~$ file /etc/shadow
+/etc/shadow: regular file, no read permission
+keaghan@DESKTOP-4U9BVB6:~$ less /etc/shadow
+/etc/shadow: Permission denied
+keaghan@DESKTOP-4U9BVB6:~$ id
+uid=1000(keaghan) gid=1000(keaghan) groups=1000(keaghan),4(adm),20(dialout),24(cdrom),25(floppy),27(sudo),29(audio),30(dip),44(video),46(plugdev),116(netdev)
+keaghan@DESKTOP-4U9BVB6:~$ > foo.txt
+keaghan@DESKTOP-4U9BVB6:~$ ls -l foo.txt
+-rw-r--r-- 1 keaghan keaghan 0 Apr  3 15:44 foo.txt
+keaghan@DESKTOP-4U9BVB6:~$ > foo.txt
+keaghan@DESKTOP-4U9BVB6:~$ ls -l foo.txt
+-rw-r--r-- 1 keaghan keaghan 0 Apr  3 15:44 foo.txt
+keaghan@DESKTOP-4U9BVB6:~$ chmod 600 foo.txt
+keaghan@DESKTOP-4U9BVB6:~$ ls -l foo.txt
+-rw------- 1 keaghan keaghan 0 Apr  3 15:44 foo.txt
+keaghan@DESKTOP-4U9BVB6:~$ rm -f foo.txt
+keaghan@DESKTOP-4U9BVB6:~$ umask
+0022
+keaghan@DESKTOP-4U9BVB6:~$ > foo.txt
+keaghan@DESKTOP-4U9BVB6:~$ ls -l foo.txt
+-rw-r--r-- 1 keaghan keaghan 0 Apr  3 15:45 foo.txt
+keaghan@DESKTOP-4U9BVB6:~$ rm foo.txt
+keaghan@DESKTOP-4U9BVB6:~$ umask 0000
+keaghan@DESKTOP-4U9BVB6:~$ > foo.txt
+keaghan@DESKTOP-4U9BVB6:~$ ls -l foo,tx
+ls: cannot access 'foo,tx': No such file or directory
+keaghan@DESKTOP-4U9BVB6:~$ ls -l foo.txt
+-rw-rw-rw- 1 keaghan keaghan 0 Apr  3 15:45 foo.txt
+keaghan@DESKTOP-4U9BVB6:~$ rm foo.txt; umask 0002
+keaghan@DESKTOP-4U9BVB6:~$ su [-[l]] [keaghan]
+su: user [-[l]] does not exist or the user entry does not contain all the required fields
+keaghan@DESKTOP-4U9BVB6:~$ su -
+Password:
+su: Authentication failure
+keaghan@DESKTOP-4U9BVB6:~$ su -
+Password:
+su: Authentication failure
+keaghan@DESKTOP-4U9BVB6:~$
