@@ -1,4 +1,5 @@
-This message is shown once a day. To disable it please create the
+#Concepts Addresed: Prompt, Shell, Parameter, Metacharacter, Text Editor, Comment, Variable, Script
+
 /home/keaghan/.hushlogin file.
 keaghan@DESKTOP-4U9BVB6:~$ printenv | less
 keaghan@DESKTOP-4U9BVB6:~$ printenv USER
