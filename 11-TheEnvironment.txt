@@ -1,1 +1,65 @@
-
+This message is shown once a day. To disable it please create the
+/home/keaghan/.hushlogin file.
+keaghan@DESKTOP-4U9BVB6:~$ printenv | less
+keaghan@DESKTOP-4U9BVB6:~$ printenv USER
+keaghan
+keaghan@DESKTOP-4U9BVB6:~$ set | less
+keaghan@DESKTOP-4U9BVB6:~$ echo $HOME
+/home/keaghan
+keaghan@DESKTOP-4U9BVB6:~$ alias
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias grep='grep --color=auto'
+alias l='ls -CF'
+alias la='ls -A'
+alias ll='ls -alF'
+alias ls='ls --color=auto'
+keaghan@DESKTOP-4U9BVB6:~$ ls -a
+.  ..  .bash_history  .bash_logout  .bashrc  .lesshst  .motd_shown  .profile  .ssh  .sudo_as_admin_successful
+keaghan@DESKTOP-4U9BVB6:~$ foo="This is some "
+keaghan@DESKTOP-4U9BVB6:~$ echo $foo
+This is some
+keaghan@DESKTOP-4U9BVB6:~$ foo=$foo"text."
+keaghan@DESKTOP-4U9BVB6:~$ echo $foo
+This is some text.
+keaghan@DESKTOP-4U9BVB6:~$ export PATH
+keaghan@DESKTOP-4U9BVB6:~$ gedit some_file
+Command 'gedit' not found, but can be installed with:
+sudo apt install gedit
+keaghan@DESKTOP-4U9BVB6:~$ sudo apt install gedit
+keaghan@DESKTOP-4U9BVB6:~$ nano some_file
+keaghan@DESKTOP-4U9BVB6:~$ nano some_file
+keaghan@DESKTOP-4U9BVB6:~$ nano .bashrc
+keaghan@DESKTOP-4U9BVB6:~$ l
+keaghan@DESKTOP-4U9BVB6:~$ ll
+total 36
+drwxr-x--- 4 keaghan keaghan 4096 Apr 24 14:25 ./
+drwxr-xr-x 3 root    root    4096 Apr  3 15:14 ../
+-rw------- 1 keaghan keaghan  353 Apr 17 12:09 .bash_history
+-rw-r--r-- 1 keaghan keaghan  220 Apr  3 15:14 .bash_logout
+-rw-r--r-- 1 keaghan keaghan 4053 Apr 24 14:25 .bashrc
+-rw------- 1 keaghan keaghan   20 Apr 24 14:07 .lesshst
+drwxr-xr-x 3 keaghan keaghan 4096 Apr 24 14:18 .local/
+-rw-r--r-- 1 keaghan keaghan    0 Apr 24 14:05 .motd_shown
+-rw-r--r-- 1 keaghan keaghan  807 Apr  3 15:14 .profile
+drwx------ 2 keaghan keaghan 4096 Apr  3 15:19 .ssh/
+-rw-r--r-- 1 keaghan keaghan    0 Apr  3 16:55 .sudo_as_admin_successful
+keaghan@DESKTOP-4U9BVB6:~$ l
+keaghan@DESKTOP-4U9BVB6:~$ source .bashrc
+keaghan@DESKTOP-4U9BVB6:~$ l
+keaghan@DESKTOP-4U9BVB6:~$ ll
+total 0
+keaghan@DESKTOP-4U9BVB6:~$ l.
+.  ..  .bash_history  .bash_logout  .bashrc  .lesshst  .local  .motd_shown  .profile  .ssh  .sudo_as_admin_successful
+keaghan@DESKTOP-4U9BVB6:~$ ll.
+Command 'll.' not found, did you mean:
+  command 'lld' from deb lld (1:14.0-55~exp2)
+  command 'llt' from deb storebackup (3.2.1-2)
+  command 'lli' from deb llvm-runtime (1:14.0-55~exp2)
+  command 'llc' from deb llvm (1:14.0-55~exp2)
+Try: sudo apt install <deb name>
+keaghan@DESKTOP-4U9BVB6:~$ lld
+Command 'lld' not found, but can be installed with:
+sudo apt install lld
+keaghan@DESKTOP-4U9BVB6:~$ ~
